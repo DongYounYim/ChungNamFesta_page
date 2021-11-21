@@ -126,5 +126,6 @@ jQuery(document).ready(function ($) {
   });
 
   // custom code
-
 });
+
+//위에 까지 작성된 코드

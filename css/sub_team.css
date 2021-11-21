@@ -204,82 +204,110 @@
 }
 
 /*main div*/
+#main {
+  display: grid;
+  grid-template-columns: 15% 83%;
+}
 
-/* Team Section
---------------------------------*/
+#section-header {
+  padding-top: 60px;
+  text-align: center;
+}
 
-.section-header .section-title {
+#section-header .section-title {
   font-size: 32px;
   color: #111;
   text-transform: uppercase;
-  text-align: center;
   font-weight: 700;
   margin-bottom: 5px;
 }
 
-.section-header .section-description {
-  text-align: center;
-  padding-bottom: 40px;
+#section-header .section-description {
   color: #999;
 }
-main #team {
-  background: #fff;
-  padding: 80px 0 60px 0;
+
+#main_content hr {
+  border: solid 2px green;
+  background-color: green;
 }
 
-main #team .member {
+.p-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.c-item {
+  display:grid;
+  grid-template-columns: 300px;
+  grid-template-rows: 90% 10%;
   text-align: center;
-  margin-bottom: 20px;
 }
 
-main #team .member .pic {
-  margin-bottom: 15px;
-  overflow: hidden;
-  width: 260px;
-  height: 260px;
+.c-item h4 {
+  font-size: 20px;
+  color: black;
+  font-weight: 500;
+  margin-top: 5px;
 }
 
-main #team .member .pic img {
-  vertical-align: middle;
-  max-width: 100%;
+.main_item {
+  justify-self: center;
+  align-self: center;
 }
 
-main #team .member h4 {
-  font-weight: 700;
-  margin-bottom: 2px;
-  font-size: 18px;
-}
-
-main #team .member .social {
-  margin-top: 15px;
-}
-
-main #team .member .social a {
-  color: #b3b3b3;
-}
-
-main #team .member .social a:hover {
-  color: #2dc997;
-}
-
-main #team .member .social i {
-  font-size: 18px;
-  margin: 0 2px;
+@media ( max-width: 768px ){
+  #main {
+    grid-template-columns: 1fr;
+  }
+  #side_nav, #side_nav table{
+    display: none;
+  }
+  .p-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
 }
 
 /*aside navigation*/
 
-#aside {
-  margin-left: 30px;
-  width: 10%;
-  float: left;
-  position: sticky;
+#side_nav {
+  display: flex;
+  flex-direction: column;
+  margin-right: 20px;
+  margin-left: 20px;
 }
 
-main aside ul ul {
-  margin-left: -20%;
+#side_nav table thead {
+  background-color: green;
+  flex: 1;
+  margin-bottom: 20px;
 }
 
+#side_nav table, #side_nav tr, #side_nav td {
+  text-align: center;
+  border: 1px solid black;
+}
+
+#side_nav thead tr, #side_nav thead td {
+  padding: 20px;
+  font-size: 25px;
+  color: #111;
+  text-transform: uppercase;
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
+#side_nav tr, #side_nav td {
+  padding: 15px;
+}
+
+#side_nav table tbody {
+  background-color: rgb(169, 204, 124);
+  flex: 1;
+}
 /* footer */
 footer {
   width: 100%;

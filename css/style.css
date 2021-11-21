@@ -519,7 +519,8 @@ hr {
 
 #about .about-container .background {
   min-height: 300px;
-  background: url(../img/1-1.jpg) center top no-repeat;
+  background: url(../img/f_poster.jpg) center top no-repeat;
+  background-size: contain;
   margin-bottom: 10px;
 }
 

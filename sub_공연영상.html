@@ -2,13 +2,12 @@
 <html lang="ko">
   <head>
     <meta charset="utf-8">
-    <title>축제상세일정</title>
+    <title>비디오 갤러리</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <!-- Bootstrap CSS File -->
     <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <!-- Main Stylesheet File -->
-    <link href="css/sub_fest.css" rel="stylesheet">
-
+    <link href="css/sub_board.css" rel="stylesheet">
   </head>
   <body>
     <div id="wrapper">
@@ -23,14 +22,13 @@
 
           <nav id="nav-menu-container">
             <ul class="nav-menu">
-              <li class="menu-active"><a href="#hero">HOME</a></li>
-              <li><a href="#introduce">축제 소개</a></li>
-              <li><a href="#about">프로그램 소개</a>
+              <li class="menu-active"><a href="http://www.cnfesta.co.kr">HOME</a></li>
+              <li><a href="sub_축제상세일정">프로그램 소개</a>
                 <ul>
                   <li class="menu-has-children"><a target="_blank" href="sub_축제상세일정.html">축제상세일정</a>
                     <ul>
-                      <li><a href="#">아산 공연</a></li>
-                      <li><a href="#">당진 공연</a></li>
+                      <li><a href="sub_축제상세일정.html">아산 공연</a></li>
+                      <li><a href="sub_축제상세일정.html">당진 공연</a></li>
                     </ul>
                   </li>
                   <li><a target="_blank" href="sub_팀소개.html">팀 소개</a></li>
@@ -39,9 +37,9 @@
               <li><a href="sub_포토갤러리.html">자료실</a>
                 <ul>
                   <li><a target="_blank" href="sub_포토갤러리.html">포토갤러리</a></li>
-                  <li><a target="_blank" href="sub_공연영상.html">공연영상</a></li>
-                  <li><a target="_blank" href="sub_comingsoon.html">자유게시판</a></li>
-                  <li><a target="_blank" href="http://www.newstnt.com/news/articleView.html?idxno=85811">관련기사</a></li>
+                  <li><a target="_blank" href="sub_공연영상.html">공연영상</a><li>
+                  <li><a target="_blank" href="sub_comingsoon.html">자유게시판</a><li>
+                  <li><a target="_blank" href="http://www.newstnt.com/news/articleView.html?idxno=85811">관련기사</a><li>
                 </ul>
               </li>
               <li><a href="https://forms.gle/FADEq4NmTTTekRBQ7">Contact Us</a></li>
@@ -58,59 +56,52 @@
 
       <!-- main content -->
       <div id="section-header">
-        <h3 class="section-title">축제 상세일정 소개</h3>
-        <p class="section-description">아산 공연</p>
+        <h3 class="section-title"> 비디오 갤러리 </h3>
+        <p class="section-description"> 아쉽게 놓친 공연을 확인할 수 있습니다!</p>
       </div>
       <main id="main">
-        <!--사이드바-->
         <div class="my_container" id="side_nav">
-          <table>
-            <thead>
-              <tr>
-                <td>QUICK MENU</td>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td><a href="http://www.cnfesta.co.kr">HOME</a></td>
-              </tr>
-              <tr>
-                <td><a href="sub_팀소개.html">팀 소개</a></td>
-              </tr>
-              <tr>
-                <td><a href="sub_축제상세일정.html">프로그램 소개</a></td>
-              </tr>
-              <tr>
-                <td><a href="sub_포토갤러리.html">자료실</a></td>
-              </tr>
-              <tr>
-                <td><a href="https://forms.gle/FADEq4NmTTTekRBQ7">CONTACT US</a></td>
-              </tr>
-            </tbody>
-          </table>
+            <!-- Side_nav -->
+            <table>
+              <thead>
+                <tr>
+                  <td>QUICK MENU</td>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><a href="http://www.cnfesta.co.kr">HOME</a></td>
+                </tr>
+                <tr>
+                  <td><a href="sub_팀소개.html">팀 소개</a></td>
+                </tr>
+                <tr>
+                  <td><a href="sub_축제상세일정.html">프로그램 소개</a></td>
+                </tr>
+                <tr>
+                  <td><a href="sub_포토갤러리.html">자료실</a></td>
+                </tr>
+                <tr>
+                  <td><a href="https://forms.gle/FADEq4NmTTTekRBQ7">CONTACT US</a></td>
+                </tr>
+              </tbody>
+            </table>
         </div>
-        <!--콘텐츠부분-->
         <div class="my_container" id="main_content">
-          <hr>
-          <div class="p-content">
-            <div class="c-item">
-              <h4>아산 공연(11/27)</h4>
-              <img class="feti_img" src="img/팜플렛.jpg" alt="아산신정호 이미지">
+            <hr>
+            <div class="p-content" id="tb_board">
+              <table class="board">
+                  <tr>
+                      <td class="w_date">작성일시</td>
+                      <td class="w_title">게시물제목</td>
+                      <td class="w_writer">작성자</td>
+                      <td class="w_view">조회수</td>
+                  </tr>
+              </table>
             </div>
-            <div class="c-item">
-              <h4>공연순서</h4>
-              <img class="q_sheet" src="img/temp_Q.png" alt="아산 공연 큐시트">
-              <a href="img/temp_Q.png">큐 시트 크게보기</a>
-            </div>
-            <div class="c-item">
-              <h4>찾아오시는길</h4>
-              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12784.00508388286!2d126.96654263616361!3d36.77053696777784!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357adde7f4853171%3A0x181fa4a88cdd17d4!2z7Iug7KCV7Zi4!5e0!3m2!1sko!2skr!4v1637495007455!5m2!1sko!2skr" width="100%" height="380" frameborder="0" style="border:0" allowfullscreen></iframe>
-              <p>장소 : 아산 신정호</p>
-              <p>일시 : 2021년 11월 27일 13:00PM ~ 15:00PM</p>
-            </div>
-          </div>
         </div>
       </main>
+
     <!--풋터-->
       <footer id="footer">
         <div class="footer-top">
@@ -118,6 +109,7 @@
 
           </div>
         </div>
+
         <div class="container">
           <div class="copyright">
             &copy; (충) <a target="_blank" href="http://www.chungnam.go.kr/main.do/"><strong>충청남도청</strong></a> (32255) 충청남도 홍성군 홍북읍 충남대로 21 충청남도청
@@ -135,6 +127,6 @@
       </footer><!-- #footer -->
     </div>
     <!-- JavaScript Libraries -->
-
+    <script src="js/video.js"></script>
   </body>
 </html>

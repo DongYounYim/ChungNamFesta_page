@@ -9,6 +9,9 @@
   <link href="lib/bootstrap/css/bootstrap.css" rel="stylesheet">
   <!-- Main Stylesheet File -->
   <link href="css/sub_team.css" rel="stylesheet">
+  <!--출처: https://nm-it-diary.tistory.com/82 [웹개발자 나나]-->
+  <link rel="stylesheet" href="/styles/vendor/jquery.fancybox.min.css"> 
+  <script src="/scripts/vendor/jquery.fancybox.min.js"></script>
 </head>
 
 <body>
@@ -22,28 +25,27 @@
       <nav id="nav-menu-container">
         <ul class="nav-menu">
           <li class="menu-active"><a href="http://www.cnfesta.co.kr">HOME</a></li>
-          <li><a href="#introduce">축제 소개</a></li>
           <li><a href="#about">프로그램 소개</a>
             <ul>
               <li class="menu-has-children"><a target="_blank" href="sub_축제상세일정.html">축제상세일정</a>
                 <ul>
-                  <li><a href="#">천안 공연</a></li>
                   <li><a href="#">아산 공연</a></li>
-                  <li><a href="#">홍성 공연</a></li>
+                  <li><a href="#">당진 공연</a></li>
                 </ul>
               </li>
               <li><a target="_blank" href="sub_팀소개.html">팀 소개</a></li>
             </ul>
           </li>
-          <li><a href="#services">자료실</a>
+          <li><a href="sub_포토갤러리.html">자료실</a>
             <ul>
               <li><a target="_blank" href="sub_포토갤러리.html">포토갤러리</a></li>
-              <li><a target="_blank" href="sub_comingsoon.html">공연영상</a></li>
+              <li><a target="_blank" href="sub_공연영상.html">공연영상</a></li>
               <li><a target="_blank" href="sub_comingsoon.html">자유게시판</a></li>
-              <li><a target="_blank" href="sub_comingsoon.html">관련기사</a></li>
+              <li><a target="_blank" href="http://www.newstnt.com/news/articleView.html?idxno=85811">관련기사</a></li>
             </ul>
           </li>
-          <li><a href="#contact">Contact Us</a></li>
+          <li><a href="https://forms.gle/FADEq4NmTTTekRBQ7">Contact Us</a></li>
+          <a id="log_info" href="log_in.html">Log In</a>
         </ul>
       </nav><!-- #nav-menu-container -->
     </div>
@@ -55,125 +57,109 @@
   </div>
 
   <!-- main content -->
+  <div id="section-header">
+    <h3 class="section-title">팀 소개</h3>
+    <p class="section-description">우리의 아티스트들을 소개합니다.</p>
+  </div>
   <main id="main">
-    <!--==========================
-        Team Section
-      ============================-->
-    <section id="team">
-      <div class="container">
-        <div class="section-header">
-          <h3 class="section-title">팀 소개</h3>
-          <p class="section-description">우리의 아티스트들을 소개합니다.</p>
-          <hr style="border: solid 2px green;">
+    <div class="my_container" id="side_nav">
+      <!-- Side_nav -->
+      <table>
+        <thead>
+          <tr>
+            <td>QUICK MENU</td>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><a href="http://www.cnfesta.co.kr">HOME</a></td>
+          </tr>
+          <tr>
+            <td><a href="sub_팀소개.html">팀 소개</a></td>
+          </tr>
+          <tr>
+            <td><a href="sub_축제상세일정.html">프로그램 소개</a></td>
+          </tr>
+          <tr>
+            <td><a href="sub_포토갤러리.html">자료실</a></td>
+          </tr>
+          <tr>
+            <td><a href="https://forms.gle/FADEq4NmTTTekRBQ7">CONTACT US</a></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="my_container" id="main_content">
+      <hr>
+      <div class="p-content">
+        <div class="c-item">
+          <div class="main_item">
+            <a href="팀 프로필 사진/남서울대학교 프로필.png" alt="">
+              <img class="card card-body profile" src="팀 프로필 사진/남서울대학교 프로필.png" alt="">
+            </a>
+          </div>
+          <div class="main_item"><h4>Gimme Gimme</h4></div>
         </div>
-        <div class="row">
-          <div class="col-lg-3 col-md-6">
-            <div class="member">
-              <div class="pic"><img class="card card-body" src="팀 프로필 사진/남서울대학교 프로필.png" alt=""></div>
-              <h4>TEAM 남서울대학교</h4>
-              <div class="social">
-                <!--social 계정-->
-                <a href=""><i class="fa fa-twitter"></i></a>
-                <a href=""><i class="fa fa-facebook"></i></a>
-                <a href=""><i class="fa fa-google-plus"></i></a>
-                <a href=""><i class="fa fa-linkedin"></i></a>
-              </div>
-            </div>
+        <div class="c-item">
+          <div class="main_item">
+            <a href="팀 프로필 사진/백석대학교 프로필.png" alt="">
+              <img class="card card-body profile" src="팀 프로필 사진/백석대학교 프로필.png" alt="">
+            </a>  
           </div>
-
-          <div class="col-lg-3 col-md-6">
-            <div class="member align-self-center">
-              <div class="pic"><img class="card card-body" src="팀 프로필 사진/백석대학교 프로필.png" alt=""></div>
-              <h4>TEAM 백석대학교</h4>
-              <div class="social">
-                <a href=""><i class="fa fa-twitter"></i></a>
-                <a href=""><i class="fa fa-facebook"></i></a>
-                <a href=""><i class="fa fa-google-plus"></i></a>
-                <a href=""><i class="fa fa-linkedin"></i></a>
-              </div>
-            </div>
+          <div class="main_item"><h4>Winsome</h4></div>
+        </div>
+        <div class="c-item">
+          <div class="main_item">
+            <a href="팀 프로필 사진/선문대학교 프로필.png" alt="">
+              <img class="card card-body profile" src="팀 프로필 사진/선문대학교 프로필.png" alt="">
+            </a>
           </div>
-
-          <div class="col-lg-3 col-md-6">
-            <div class="member">
-              <div class="pic"><img class="card card-body" src="팀 프로필 사진/선문대학교 프로필.png" alt=""></div>
-              <h4>TEAM 선문대학교</h4>
-              <div class="social">
-                <a href=""><i class="fa fa-twitter"></i></a>
-                <a href=""><i class="fa fa-facebook"></i></a>
-                <a href=""><i class="fa fa-google-plus"></i></a>
-                <a href=""><i class="fa fa-linkedin"></i></a>
-              </div>
-            </div>
+          <div class="main_item"><h4>신-이데아</h4></div>
+        </div>
+        <div class="c-item">
+          <div class="main_item">
+            <a href="팀 프로필 사진/세한대학교 프로필.png" alt="">
+              <img class="card card-body profile" src="팀 프로필 사진/세한대학교 프로필.png" alt="">
+            </a>
           </div>
-
-          <div class="col-lg-3 col-md-6">
-            <div class="member">
-              <div class="pic"><img class="card card-body" src="팀 프로필 사진/세한대학교 프로필.png" alt=""></div>
-              <h4>TEAM 세한대학교</h4>
-              <div class="social">
-                <a href=""><i class="fa fa-twitter"></i></a>
-                <a href=""><i class="fa fa-facebook"></i></a>
-                <a href=""><i class="fa fa-google-plus"></i></a>
-                <a href=""><i class="fa fa-linkedin"></i></a>
-              </div>
-            </div>
+          <div class="main_item"><h4>8Seconds</h4></div>
+        </div>
+        <div class="c-item">
+          <div class="main_item">
+            <a href="팀 프로필 사진/어쩌다밴드 프로필.png" alt="">
+              <img class="card card-body profile" src="팀 프로필 사진/어쩌다밴드 프로필.png" alt="">
+            </a>
           </div>
-
-          <div class="col-lg-3 col-md-6">
-            <div class="member">
-              <div class="pic"><img class="card card-body" src="팀 프로필 사진/어쩌다밴드 프로필.png" alt=""></div>
-              <h4>TEAM 어쩌다밴드</h4>
-              <div class="social">
-                <a href=""><i class="fa fa-twitter"></i></a>
-                <a href=""><i class="fa fa-facebook"></i></a>
-                <a href=""><i class="fa fa-google-plus"></i></a>
-                <a href=""><i class="fa fa-linkedin"></i></a>
-              </div>
-            </div>
+          <div class="main_item"><h4>어쩌다밴드</h4></div>
+        </div>
+        <div class="c-item">
+          <div class="pic">
+            <a href="팀 프로필 사진/점핑엔젤스 프로필.png" alt="">
+              <img class="card card-body profile" src="팀 프로필 사진/점핑엔젤스 프로필.png" alt="">
+            </a>
           </div>
-
-          <div class="col-lg-3 col-md-6">
-            <div class="member">
-              <div class="pic"><img class="card card-body" src="팀 프로필 사진/점핑엔젤스 프로필.png" alt=""></div>
-              <h4>TEAM 점핑엔젤스</h4>
-              <div class="social">
-                <a href=""><i class="fa fa-twitter"></i></a>
-                <a href=""><i class="fa fa-facebook"></i></a>
-                <a href=""><i class="fa fa-google-plus"></i></a>
-                <a href=""><i class="fa fa-linkedin"></i></a>
-              </div>
-            </div>
+          <div class="main_item"><h4>점핑엔젤스</h4></div>
+        </div>
+        <div class="c-item">
+          <div class="main_item">
+            <a href="팀 프로필 사진/중부대학교 프로필.png" alt="">
+              <img class="card card-body profile" src="팀 프로필 사진/중부대학교 프로필.png" alt="">
+            </a>
           </div>
-
-          <div class="col-lg-3 col-md-6">
-            <div class="member">
-              <div class="pic"><img class="card card-body" src="팀 프로필 사진/중부대학교 프로필.png" alt=""></div>
-              <h4>TEAM 중부대학교</h4>
-              <div class="social">
-                <a href=""><i class="fa fa-twitter"></i></a>
-                <a href=""><i class="fa fa-facebook"></i></a>
-                <a href=""><i class="fa fa-google-plus"></i></a>
-                <a href=""><i class="fa fa-linkedin"></i></a>
-              </div>
-            </div>
+          <div class="main_item"><h4>루미너스</h4></div>
+        </div>
+        <div class="c-item">
+          <div class="main_item">
+            <a href="팀 프로필 사진/한서대학교 프로필.png" alt="">
+              <img class="card card-body profile" src="팀 프로필 사진/한서대학교 프로필.png" alt="">
+            </a>
           </div>
-
-          <div class="col-lg-3 col-md-6">
-            <div class="member">
-              <div class="pic"><img class="card card-body" src="팀 프로필 사진/한서대학교 프로필.png" alt=""></div>
-              <h4>TEAM 한서대학교</h4>
-              <div class="social">
-                <a href=""><i class="fa fa-twitter"></i></a>
-                <a href=""><i class="fa fa-facebook"></i></a>
-                <a href=""><i class="fa fa-google-plus"></i></a>
-                <a href=""><i class="fa fa-linkedin"></i></a>
-              </div>
-            </div>
-          </div>
+          <div class="main_item"><h4>위너-이펙트</h4></div>
         </div>
       </div>
-    </section><!-- #team -->
+
+    </div>
+    
   </main>
 
   <!--풋터-->
@@ -183,7 +169,6 @@
 
       </div>
     </div>
-
     <div class="container">
       <div class="copyright">
         &copy; (충) <a target="_blank" href="http://www.chungnam.go.kr/main.do/"><strong>충청남도청</strong></a> (32255) 충청남도
@@ -200,6 +185,7 @@
       </div>
     </div>
   </footer><!-- #footer -->
+  <script src="js/sub_팀소개.js"></script>
 </body>
 
 </html>

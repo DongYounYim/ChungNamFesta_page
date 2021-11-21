@@ -1,106 +1,131 @@
 <!DOCTYPE html>
 <html lang="ko">
-  <head>
-    <meta charset="utf-8">
-    <title>포토갤러리</title>
-    <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <!-- Bootstrap CSS File -->
-    <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Main Stylesheet File -->
-    <link href="css/sub_fest.css" rel="stylesheet">
 
-  </head>
-  <body>
-    <div id="wrapper">
-      <header id="header" style="background-color: black">
-        <div class="container">
-          <div id="logo" class="visual_container">
-            <a href="http://www.cnfesta.co.kr"><img src="img/logo2.png" alt="" title="" /></a>
-            <!-- Uncomment below if you prefer to use a text logo -->
-            <!--<h1><a href="#hero">Regna</a></h1>-->
-          </div>
-          <nav id="nav-menu-container">
-            <ul class="nav-menu">
-              <li class="menu-active"><a href="http://www.cnfesta.co.kr">HOME</a></li>
-              <li><a href="#introduce">축제 소개</a></li>
-              <li><a href="#about">프로그램 소개</a>
-                <ul>
-                  <li class="menu-has-children"><a target="_blank" href="sub_축제상세일정.html">축제상세일정</a>
-                    <ul>
-                      <li><a href="#">천안 공연</a></li>
-                      <li><a href="#">아산 공연</a></li>
-                      <li><a href="#">홍성 공연</a></li>
-                    </ul>
-                  </li>
-                  <li><a target="_blank" href="sub_팀소개.html">팀 소개</a></li>
-                </ul>
-              </li>
-              <li><a href="#services">자료실</a>
-                <ul>
-                  <li><a target="_blank" href="sub_포토갤러리.html">포토갤러리</a></li>
-                  <li><a target="_blank" href="sub_comingsoon.html">공연영상</a></li>
-                  <li><a target="_blank" href="sub_comingsoon.html">자유게시판</a></li>
-                  <li><a target="_blank" href="sub_comingsoon.html">관련기사</a></li>
-                </ul>
-              </li>
-              <li><a href="#contact">Contact Us</a></li>
-            </ul>
-          </nav><!-- #nav-menu-container -->
-        </div>
-      </header><!-- #header -->
+<head>
+  <meta charset="utf-8">
+  <title>팀 소개</title>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <!-- Bootstrap CSS File -->
+  <link href="lib/bootstrap/css/bootstrap.css" rel="stylesheet">
+  <!-- Main Stylesheet File -->
+  <link href="css/sub_photo.css" rel="stylesheet">
+  <!--출처: https://nm-it-diary.tistory.com/82 [웹개발자 나나]-->
+  <link rel="stylesheet" href="/styles/vendor/jquery.fancybox.min.css"> 
+  <script src="/scripts/vendor/jquery.fancybox.min.js"></script>
+</head>
 
-      <!-- visual image-->
-      <div class="visual_container">
-        <img id="visual" src="img/hero-bg.jpg" alt="화면에 맞는 이미지" width="100%" height="700" allowfullscreen/>
+<body>
+  <header id="header" style="background-color: black">
+    <div class="container">
+      <div id="logo" class="visual_container">
+        <a href="http://www.cnfesta.co.kr"><img src="img/logo2.png" alt="" title="" /></a>
+        <!-- Uncomment below if you prefer to use a text logo -->
+        <!--<h1><a href="#hero">Regna</a></h1>-->
       </div>
-
-      <!-- main content -->
-      <main id="main">
-        <!--콘텐츠부분-->
-        <!--==========================
-          Introduce Section
-          ============================-->
-          <section id="photo_galary">
-            <div class="container">
-            <div class="section-header"></div>
-              <h3 class="intro_festi_title">포토갤러리</h3>
-              <p class="section-description">2021 충남 뮤직 페스타의 수많은 순간들을 담은 사진입니다!</p>
-              <hr style="border: solid 2px green;">
-              <div class="row introduce-container">
-                <div class="col-lg-6 content order-lg-1 order-2">
-                           
-
-
-              </div>
-            </div>
-          </section><!-- #introduce -->
-        </main>
-
-    <!--풋터-->
-      <footer id="footer">
-        <div class="footer-top">
-          <div class="container">
-
-          </div>
-        </div>
-
-        <div class="container">
-          <div class="copyright">
-            &copy; (충) <a target="_blank" href="http://www.chungnam.go.kr/main.do/"><strong>충청남도청</strong></a> (32255) 충청남도 홍성군 홍북읍 충남대로 21 충청남도청
-          </div>
-          <div class="credits">
-            <!--
-              All the links in the footer should remain intact.
-              You can delete the links only if you purchased the pro version.
-              Licensing information: https://bootstrapmade.com/license/
-              Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/buy/?theme=Regna
-            -->
-            TEL. 041-120   FAX. 041-653-3000 COPYRIGHT ⓒ 2018 THE PROVINCE OF CHUNGCHUNGNAM-DO. ALL RIGHTS RESERVED
-          </div>
-        </div>
-      </footer><!-- #footer -->
+      <nav id="nav-menu-container">
+        <ul class="nav-menu">
+          <li class="menu-active"><a href="http://www.cnfesta.co.kr">HOME</a></li>
+          <li><a href="#about">프로그램 소개</a>
+            <ul>
+              <li class="menu-has-children"><a target="_blank" href="sub_축제상세일정.html">축제상세일정</a>
+                <ul>
+                  <li><a href="#">아산 공연</a></li>
+                  <li><a href="#">당진 공연</a></li>
+                </ul>
+              </li>
+              <li><a target="_blank" href="sub_팀소개.html">팀 소개</a></li>
+            </ul>
+          </li>
+          <li><a href="sub_포토갤러리.html">자료실</a>
+            <ul>
+              <li><a target="_blank" href="sub_포토갤러리.html">포토갤러리</a></li>
+              <li><a target="_blank" href="sub_공연영상.html">공연영상</a></li>
+              <li><a target="_blank" href="sub_comingsoon.html">자유게시판</a></li>
+              <li><a target="_blank" href="http://www.newstnt.com/news/articleView.html?idxno=85811">관련기사</a></li>
+            </ul>
+          </li>
+          <li><a href="https://forms.gle/FADEq4NmTTTekRBQ7">Contact Us</a></li>
+          <a id="log_info" href="log_in.html">Log In</a>
+        </ul>
+      </nav><!-- #nav-menu-container -->
     </div>
-    <!-- JavaScript Libraries -->
+  </header><!-- #header -->
 
-  </body>
+  <!-- visual image-->
+  <div class="visual_container">
+    <img id="visual" src="img/hero-bg.jpg" alt="화면에 맞는 이미지" width="100%" height="700" allowfullscreen />
+  </div>
+
+  <!-- main content -->
+  <div id="section-header">
+    <h3 class="section-title">포토갤러리</h3>
+    <p class="section-description">뮤직 페스타의 수 많은 순간들이 담긴 사진입니다.</p>
+  </div>
+  <main id="main">
+    <div class="my_container" id="side_nav">
+      <!-- Side_nav -->
+      <table>
+        <thead>
+          <tr>
+            <td>QUICK MENU</td>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><a href="http://www.cnfesta.co.kr">HOME</a></td>
+          </tr>
+          <tr>
+            <td><a href="sub_팀소개.html">팀 소개</a></td>
+          </tr>
+          <tr>
+            <td><a href="sub_축제상세일정.html">프로그램 소개</a></td>
+          </tr>
+          <tr>
+            <td><a href="sub_포토갤러리.html">자료실</a></td>
+          </tr>
+          <tr>
+            <td><a href="https://forms.gle/FADEq4NmTTTekRBQ7">CONTACT US</a></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="my_container" id="main_content">
+      <hr>
+      <div class="p-content">
+        <div class="c-item">
+          <div class="main_item">
+            <a href="img/hero-bg 4.jpg" alt="사진크게보기">
+              <img class="my_photo" src="img/hero-bg 4.jpg" alt="사진">
+            </a>
+          </div>
+          <div class="main_item"><h4>사진 제목입력</h4></div>
+        </div>
+    </div>
+  </main>
+
+  <!--풋터-->
+  <footer id="footer">
+    <div class="footer-top">
+      <div class="container">
+
+      </div>
+    </div>
+    <div class="container">
+      <div class="copyright">
+        &copy; (충) <a target="_blank" href="http://www.chungnam.go.kr/main.do/"><strong>충청남도청</strong></a> (32255) 충청남도
+        홍성군 홍북읍 충남대로 21 충청남도청
+      </div>
+      <div class="credits">
+        <!--
+            All the links in the footer should remain intact.
+            You can delete the links only if you purchased the pro version.
+            Licensing information: https://bootstrapmade.com/license/
+            Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/buy/?theme=Regna
+          -->
+        TEL. 041-120 FAX. 041-653-3000 COPYRIGHT ⓒ 2018 THE PROVINCE OF CHUNGCHUNGNAM-DO. ALL RIGHTS RESERVED
+      </div>
+    </div>
+  </footer><!-- #footer -->
+</body>
+
 </html>
