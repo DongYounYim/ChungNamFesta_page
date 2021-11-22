@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>글쓰기</title>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <!-- Bootstrap CSS File -->
+    <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Main Stylesheet File -->
+    <link href="css/sub_content.css" rel="stylesheet">
+</head>
+<body>
+    <div id="wrapper">
+        <header id="header" style="background-color: black">
+          <div class="container">
+  
+            <div id="logo" class="visual_container">
+              <a href="http://www.cnfesta.co.kr"><img src="img/logo2.png" alt="" title="" /></a>
+              <!-- Uncomment below if you prefer to use a text logo -->
+              <!--<h1><a href="#hero">Regna</a></h1>-->
+            </div>
+            <nav id="nav-menu-container">
+              <ul class="nav-menu">
+                <li class="menu-active"><a href="http://www.cnfesta.co.kr">HOME</a></li>
+                <li><a href="sub_축제상세일정">프로그램 소개</a>
+                  <ul>
+                    <li class="menu-has-children"><a target="_self" href="sub_축제상세일정.html">축제상세일정</a>
+                      <ul>
+                        <li><a href="sub_축제상세일정.html">아산 공연</a></li>
+                        <li><a href="sub_축제상세일정.html">당진 공연</a></li>
+                      </ul>
+                    </li>
+                    <li><a target="_self" href="sub_팀소개.html">팀 소개</a></li>
+                  </ul>
+                </li>
+                <li><a href="sub_포토갤러리.html">자료실</a>
+                  <ul>
+                    <li><a target="_self" href="sub_포토갤러리.html">포토갤러리</a></li>
+                    <li><a target="_self" href="sub_공연영상.html">공연영상</a><li>
+                    <li><a target="_self" href="sub_자유게시판.html">자유게시판</a><li>
+                    <li><a target="_self" href="http://www.newstnt.com/news/articleView.html?idxno=85811">관련기사</a><li>
+                  </ul>
+                </li>
+                <li><a href="https://forms.gle/FADEq4NmTTTekRBQ7">Contact Us</a></li>
+                <a id="log_info" href="log_in.html">Log In</a>
+              </ul>
+            </nav><!-- #nav-menu-container -->
+          </div>
+        </header><!-- #header -->
+
+        <!-- main content-->
+        <main id="main">
+          <div class="my_container" id="side_nav">
+              <!-- Side_nav -->
+              <table>
+                <thead>
+                  <tr>
+                    <td>QUICK MENU</td>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a href="http://www.cnfesta.co.kr">HOME</a></td>
+                  </tr>
+                  <tr>
+                    <td><a href="sub_팀소개.html">팀 소개</a></td>
+                  </tr>
+                  <tr>
+                    <td><a href="sub_축제상세일정.html">프로그램 소개</a></td>
+                  </tr>
+                  <tr>
+                    <td><a href="sub_포토갤러리.html">자료실</a></td>
+                  </tr>
+                  <tr>
+                    <td><a href="https://forms.gle/FADEq4NmTTTekRBQ7">CONTACT US</a></td>
+                  </tr>
+                </tbody>
+              </table>
+          </div>
+          <div class="my_container" id="main_content">
+            <h3>게시물 쓰기</h3>
+            <hr id="my_hr">
+            <div id="writing_header">
+              <input type="text" placeholder="게시물제목" id="board_title">
+            </div>
+            <hr>
+            <div id="writing_body">
+              <textarea id="board_contents" placeholder="내용입력"></textarea>
+            </div>
+            <div id="regist_div">
+              <button id="regist_btn">게시물 등록</button>
+            </div>
+          </div>
+        </main>
+    </div>
+</body>
+</html>

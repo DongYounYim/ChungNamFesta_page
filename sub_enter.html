@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <title>회원가입</title>
+    <link href="css/sub_enter.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="my_container">
+        <a href="main.html">
+            <img id="mainlogo" src="./img/logo2.png" alt="메인로고">
+        </a>
+    </div>
+    <br>
+    <br>
+    <hr>
+    <table>
+        <tbody>
+            <tr>
+                <td>*아이디</td>
+                <td><input type="text" id="id" required></td>
+            </tr>
+            <tr>
+                <td>*비밀번호</td>
+                <td><input type="password" id="pw" required></td>
+            </tr>
+            <tr>
+                <td>*비밀번호 확인</td>
+                <td><input type="password" id="pw_check" required></td>
+            </tr>
+            <tr>
+                <td>*이름</td>
+                <td><input type="password" id="name" required></td>
+            </tr>
+            <tr>
+                <td>휴대폰번호</td>
+                <td><input type="text" id="phone"></td>
+            </tr>
+            <tr>
+                <td>*이메일</td>
+                <td><input type="email" id="mail" required></td>
+            </tr>
+            <tr>
+                <td>약관동의 <input type="checkbox" id="agree"></td>
+                <td><iframe src="약관.txt"></iframe></td>
+            </tr>
+        </tbody>
+    </table>
+    <br>
+    <hr>
+    <br>
+    <div class="my_container">
+        <input type="submit" value="회원가입" id="signup">
+    </div>
+</body>
+</html>

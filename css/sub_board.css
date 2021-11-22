@@ -229,6 +229,11 @@
     border: solid 2px green;
     background-color: green;
   }
+
+  .div_input {
+    display: flex;
+    justify-content: flex-end;
+  }
   
   .p-content {
     display: grid;
@@ -266,6 +271,16 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
   }
+}
+
+.page_nav {
+  display: flex;
+  justify-content: center;
+}
+
+.page_nav a {
+  padding-left: 10px;
+  padding-right: 10px;
 }
 /*aside navigation*/
 
