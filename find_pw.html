@@ -4,12 +4,15 @@
     <meta charset="utf-8">
     <title>find_pw</title>
     <link href="css/sub_enter.css" rel="stylesheet">
+    <!--DB(Firebase)-->
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
 </head>
 
 <body>
     <div class="container">
         <div class="my_container">
-            <a href="main.html">
+            <a href="index.html">
                 <img id="mainlogo" src="./img/logo2.png" alt="메인로고">
             </a>
         </div>
@@ -32,9 +35,33 @@
         <hr>
         <br>
         <div class="my_container">
-            <input type="submit" value="비밀번호 찾기" id="signup">
+            <input type="submit" value="비밀번호 찾기" id="find">
         </div>
     </div>
+    <script>
+        // Import the functions you need from the SDKs you need
+        //import { initializeApp } from "https://www.gstatic.com/firebasejs/9.5.0/firebase-app.js";
+        //import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.5.0/firebase-analytics.js";
+        // TODO: Add SDKs for Firebase products that you want to use
+        // https://firebase.google.com/docs/web/setup#available-libraries
+        
+        // Your web app's Firebase configuration
+        // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+        const firebaseConfig = {
+            apiKey: "AIzaSyBg9n_0QAy1EdF6Tp5p86a6PmC-b1EjFis",
+            authDomain: "cnmusicfesta.firebaseapp.com",
+            projectId: "cnmusicfesta",
+            storageBucket: "cnmusicfesta.appspot.com",
+            messagingSenderId: "832601431436",
+            appId: "1:832601431436:web:9e808f28d1eebc43dd4aa9",
+            measurementId: "G-S8J3BYFX46"
+        };
+        
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+        //const analytics = getAnalytics(app);
+        var db = firebase.firestore();
+    </script>
     <script src="js/find_pw.js"></script>
 </body>
 </html>

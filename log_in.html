@@ -5,21 +5,24 @@
     <title>login</title>
 
     <link href="css/log_in.css" rel="stylesheet">
+    <!--DB(Firebase)-->
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
 </head>
 
 <body>
     <div class="container">
         <div class="my_item" id="logo">
-            <a href="main.html">
+            <a href="index.html">
                 <img id="mainlogo" src="./img/logo2.png" alt="메인로고">
             </a> <br>
         </div>
         <div class="my_item input_box">
-            <span class="item">아이디</span> <input class="item" type="text" required>
+            <span class="item">아이디</span> <input id="id" class="item" type="text" required>
         </div>
         <div class="my_item input_box">
             <span class="item">비밀번호</span> 
-            <input class="item" type="text" required>
+            <input id="pw" class="item" type="password" required>
         </div>
         <div class="my_item">
             <button id="log_in">로그인</button>
@@ -31,5 +34,30 @@
             <a href="find_pw.html">비밀번호 찾기</a>
         </div>
     </div>
+    <script>
+        // Import the functions you need from the SDKs you need
+        //import { initializeApp } from "https://www.gstatic.com/firebasejs/9.5.0/firebase-app.js";
+        //import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.5.0/firebase-analytics.js";
+        // TODO: Add SDKs for Firebase products that you want to use
+        // https://firebase.google.com/docs/web/setup#available-libraries
+        
+        // Your web app's Firebase configuration
+        // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+        const firebaseConfig = {
+            apiKey: "AIzaSyBg9n_0QAy1EdF6Tp5p86a6PmC-b1EjFis",
+            authDomain: "cnmusicfesta.firebaseapp.com",
+            projectId: "cnmusicfesta",
+            storageBucket: "cnmusicfesta.appspot.com",
+            messagingSenderId: "832601431436",
+            appId: "1:832601431436:web:9e808f28d1eebc43dd4aa9",
+            measurementId: "G-S8J3BYFX46"
+        };
+        
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+        //const analytics = getAnalytics(app);
+        var db = firebase.firestore();
+    </script>
+    <script tpye="text/javascript" src="js/login.js"></script>
 </body>
 </html>

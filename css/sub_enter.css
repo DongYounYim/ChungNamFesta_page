@@ -27,3 +27,8 @@ th, td {
     position: absolute;
     top: 25%;
 }
+
+.info {
+    font-size: 10px;
+    color: #999;
+}
