@@ -1,41 +1,71 @@
 let tb_board = document.getElementById("tb_board");
 
-// $(document).ready(function() {
+$(document).ready(function() {
+    let loginfo = document.getElementById("log_info");
+    if(sessionStorage.id != null && sessionStorage.name != null) {
+        loginfo.innerHTML = sessionStorage.name + " 님";
+        loginfo.href = "sub_comingsoon.html";     //회원정보 수정.
+    }
     //DB에서 게시물 목록 받아와서 넣기.
-// })
+    db.collection("video")
+    .get()
+    .then((querySanpshot) => {
+      querySanpshot.forEach((doc) => {
+        let my_table = document.createElement("table");
+        my_table.className = "board";
 
-function load_video_page() {
-    //일단은 바로 youtube로 넘어가지만
-    //비디오 페이지 DB필요
-    window.location.href = "https://youtu.be/WEwiqXaZoOs";
+        tb_board.appendChild(my_table);
+
+        let my_tr = document.createElement("tr");
+        my_table.appendChild(my_tr);
+        let date = document.createElement("td");
+        date.className = "w_date";
+        date.innerHTML = `${doc.data().date}`
+        my_tr.appendChild(date);
+
+        let title = document.createElement("td");
+        title.className = "w_title";
+        title.addEventListener("click", function() {
+          load_video_page(`${doc.data().timestamp}`, `${doc.data().view}`);
+        });
+        title.innerHTML = `${doc.data().title}`;
+        my_tr.appendChild(title);
+
+        let writer = document.createElement("td");
+        writer.className = "w_writer";
+        writer.innerHTML = `${doc.data().writer}`
+        my_tr.appendChild(writer);
+
+        let view = document.createElement("td");
+        view.className = "w_view";
+        view.innerHTML = `${doc.data().view}`;
+        my_tr.appendChild(view);
+      })
+    })
+})
+
+function load_video_page(timestamp, view) {
+  db.collection("video").doc(timestamp).update({
+    "view": Number(view) + 1
+  })
+  .then(() => {
+    sessionStorage.setItem("from", "video");
+    sessionStorage.setItem("timestamp", timestamp);
+    window.location.href = "sub_read.html";
+  })
 }
 
-//임시 게시물 1
-let my_table = document.createElement("table");
-my_table.className = "board";
 
-tb_board.appendChild(my_table);
+//축제상세일정클릭 
+let dangjin = document.getElementById("dangjin");
+dangjin.addEventListener("click", dangjin_click)
+let asan = document.getElementById("asan");
+asan.addEventListener("click", asan_click);
 
-let my_tr = document.createElement("tr");
-my_table.appendChild(my_tr);
-let date = document.createElement("td");
-date.className = "w_date";
-date.innerHTML = "2021-11-21";
-my_tr.appendChild(date);
+function dangjin_click() {
+  sessionStorage.setItem("locate", "dangjin");
+}
 
-let title = document.createElement("td");
-title.className = "w_title";
-title.addEventListener("click", load_video_page);
-title.innerHTML = "천안공연 영상(FULL)";
-my_tr.appendChild(title);
-
-let writer = document.createElement("td");
-writer.className = "w_writer";
-writer.innerHTML = "관리자";
-my_tr.appendChild(writer);
-
-let view = document.createElement("td");
-view.className = "w_view";
-view.innerHTML = "0";
-my_tr.appendChild(view);
-
+function asan_click() {
+  sessionStorage.setItem("locate", "asan");
+}

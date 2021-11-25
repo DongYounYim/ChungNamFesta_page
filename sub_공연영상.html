@@ -8,6 +8,9 @@
     <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <!-- Main Stylesheet File -->
     <link href="css/sub_board.css" rel="stylesheet">
+    <!--DB(Firebase)-->
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
   </head>
   <body>
     <div id="wrapper">
@@ -26,8 +29,8 @@
                 <ul>
                   <li class="menu-has-children"><a target="_self" href="sub_축제상세일정.html">축제상세일정</a>
                     <ul>
-                      <li><a href="sub_축제상세일정.html">아산 공연</a></li>
-                      <li><a href="sub_축제상세일정.html">당진 공연</a></li>
+                      <li><a id="asan" href="sub_축제상세일정.html">아산 공연</a></li>
+                      <li><a id="dangjin" href="sub_축제상세일정.html">당진 공연</a></li>
                     </ul>
                   </li>
                   <li><a target="_self" href="sub_팀소개.html">팀 소개</a></li>
@@ -100,19 +103,6 @@
             </div>
         </div>
       </main>
-      <div class="page_nav">
-        <tr>
-          <td colspan="7">
-            <a href="#">이전</a>
-            <a href="#">1</a>
-            <a href="#">2</a>
-            <a href="#">3</a>
-            <a href="#">4</a>
-            <a href="#">5</a>
-            <a href="#">다음</a>
-          </td>
-        </tr>
-      </div>
 
     <!--풋터-->
       <footer id="footer">
@@ -138,7 +128,31 @@
         </div>
       </footer><!-- #footer -->
     </div>
-    <!-- JavaScript Libraries -->
+    <script  src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script>
+      // Import the functions you need from the SDKs you need
+      //import { initializeApp } from "https://www.gstatic.com/firebasejs/9.5.0/firebase-app.js";
+      //import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.5.0/firebase-analytics.js";
+      // TODO: Add SDKs for Firebase products that you want to use
+      // https://firebase.google.com/docs/web/setup#available-libraries
+      
+      // Your web app's Firebase configuration
+      // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+      const firebaseConfig = {
+          apiKey: "AIzaSyBg9n_0QAy1EdF6Tp5p86a6PmC-b1EjFis",
+          authDomain: "cnmusicfesta.firebaseapp.com",
+          projectId: "cnmusicfesta",
+          storageBucket: "cnmusicfesta.appspot.com",
+          messagingSenderId: "832601431436",
+          appId: "1:832601431436:web:9e808f28d1eebc43dd4aa9",
+          measurementId: "G-S8J3BYFX46"
+      };
+      
+      // Initialize Firebase
+      firebase.initializeApp(firebaseConfig);
+      //const analytics = getAnalytics(app);
+      var db = firebase.firestore();
+    </script>
     <script src="js/video.js"></script>
   </body>
 </html>

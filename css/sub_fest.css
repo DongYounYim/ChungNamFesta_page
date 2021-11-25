@@ -234,12 +234,12 @@
   grid-template-rows: 1fr 1fr;
 }
 
-.feti_img {
+#feti_img {
   max-width: 90%;
   height: auto;
 }
 
-.q_sheet {
+#q_sheet {
   max-width: 100%;
   height: auto;
 }

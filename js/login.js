@@ -30,7 +30,6 @@ function login() {
             //sessionStroage에 id와 name저장
             sessionStorage.setItem("id", user_id);
             sessionStorage.setItem("name", user_name);
-            alert("로그인 성공");
         } else {
             alert("일치하는 회원정보가 없습니다.");
         }
