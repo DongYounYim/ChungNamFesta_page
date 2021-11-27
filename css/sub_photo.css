@@ -259,6 +259,7 @@
   }
 
   .my_photo {
+      object-fit: contain;
       max-width: 100%;
       height: auto;
   }
@@ -284,6 +285,12 @@
   .page_nav a {
     padding-left: 10px;
     padding-right: 10px;
+  }
+
+  #ma_td a:hover {  
+    background-color: silver;
+    cursor: pointer;
+
   }
   /*aside navigation*/
   

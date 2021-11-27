@@ -59,7 +59,10 @@ function sign() {
                     mail: input_mail.value
                 })
                 .then((docRef) => {
-                    alert("회원가입 성공");
+                    alert("회원가입 성공! \n3초 뒤 로그인 페이지로 이동합니다.");
+                    setTimeout(function() {
+                        location.href = "log_in.html";
+                    }, 3000);
                 })
                 .catch((error) => {
                     console.log("Error adding document: ", error);

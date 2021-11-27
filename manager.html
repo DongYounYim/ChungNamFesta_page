@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>매니저 전용</title>
+    <!--DB(Firebase)-->
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-storage.js"></script>
+</head>
+<body>
+    <h3>포토갤러리에 사진올리기</h3>
+    <input id="upload_img" type="file">
+    <input id="upload_title" type="text">
+    <button id="img_upload">이미지 파일 올리기</button>
+    <br>
+    <br>
+    <h3>비디오갤러리에 비디오올리기</h3>
+    <p>졸리다 나중에 구현하자</p>
+    <script>
+        // Import the functions you need from the SDKs you need
+        //import { initializeApp } from "https://www.gstatic.com/firebasejs/9.5.0/firebase-app.js";
+        //import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.5.0/firebase-analytics.js";
+        // TODO: Add SDKs for Firebase products that you want to use
+        // https://firebase.google.com/docs/web/setup#available-libraries
+        
+        // Your web app's Firebase configuration
+        // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+        const firebaseConfig = {
+            apiKey: "AIzaSyBg9n_0QAy1EdF6Tp5p86a6PmC-b1EjFis",
+            authDomain: "cnmusicfesta.firebaseapp.com",
+            projectId: "cnmusicfesta",
+            storageBucket: "cnmusicfesta.appspot.com",
+            messagingSenderId: "832601431436",
+            appId: "1:832601431436:web:9e808f28d1eebc43dd4aa9",
+            measurementId: "G-S8J3BYFX46"
+        };
+        
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+        //const analytics = getAnalytics(app);
+        var db = firebase.firestore();
+        var storage = firebase.storage();
+        var storageRef = storage.ref();
+      </script>
+      <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+      <script src="js/manager.js"></script>
+</body>
+</html>

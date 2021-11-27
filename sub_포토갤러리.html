@@ -9,6 +9,10 @@
   <link href="lib/bootstrap/css/bootstrap.css" rel="stylesheet">
   <!-- Main Stylesheet File -->
   <link href="css/sub_photo.css" rel="stylesheet">
+  <!--DB(Firebase)-->
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-storage.js"></script>
 </head>
 
 <body>
@@ -88,7 +92,7 @@
     </div>
     <div class="my_container" id="main_content">
       <hr>
-      <div class="p-content">
+      <div id="img_div" class="p-content">
         <div class="c-item">
           <div class="main_item">
             <a href="img/hero-bg 4.jpg" alt="사진크게보기">
@@ -99,18 +103,16 @@
         </div>
     </div>
   </main>
+  <hr>
   <div class="page_nav">
-    <tr>
-      <td colspan="7">
-        <a href="#">이전</a>
-        <a href="#">1</a>
-        <a href="#">2</a>
-        <a href="#">3</a>
-        <a href="#">4</a>
-        <a href="#">5</a>
-        <a href="#">다음</a>
-      </td>
-    </tr>
+    <table>
+      <tr>
+        <td id="ma_td" colspan="7">
+  
+        </td>
+      </tr>
+    </table>
+    
   </div>
 
   <!--풋터-->
@@ -136,7 +138,34 @@
       </div>
     </div>
   </footer><!-- #footer -->
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script>
+    // Import the functions you need from the SDKs you need
+    //import { initializeApp } from "https://www.gstatic.com/firebasejs/9.5.0/firebase-app.js";
+    //import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.5.0/firebase-analytics.js";
+    // TODO: Add SDKs for Firebase products that you want to use
+    // https://firebase.google.com/docs/web/setup#available-libraries
+    
+    // Your web app's Firebase configuration
+    // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+    const firebaseConfig = {
+        apiKey: "AIzaSyBg9n_0QAy1EdF6Tp5p86a6PmC-b1EjFis",
+        authDomain: "cnmusicfesta.firebaseapp.com",
+        projectId: "cnmusicfesta",
+        storageBucket: "cnmusicfesta.appspot.com",
+        messagingSenderId: "832601431436",
+        appId: "1:832601431436:web:9e808f28d1eebc43dd4aa9",
+        measurementId: "G-S8J3BYFX46"
+    };
+    
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+    //const analytics = getAnalytics(app);
+    var db = firebase.firestore();
+    var storage = firebase.storage();
+    var storageRef = storage.ref();
+  </script>
+  <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+  <script src="js/photo.js"></script>
 </body>
 
 </html>

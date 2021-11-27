@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <title>회원정보수정</title>
+    <link href="css/sub_enter.css" rel="stylesheet">
+    <!--DB(Firebase)-->
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+</head>
+
+<body>
+    <div class="my_container">
+        <a href="index.html">
+            <img id="mainlogo" src="./img/logo2.png" alt="메인로고">
+        </a>
+    </div>
+    <br>
+    <br>
+    <hr>
+    <table>
+        <tbody>
+            <tr>
+                <td>*아이디</td>
+                <td id="my_id"></td>
+            </tr>
+            <tr>
+                <td>*비밀번호 변경</td>
+                <td><input type="password" id="pw" required></td>
+                <td class="info">비밀번호는 영어, 숫자 포함 8자이상</td>
+            </tr>
+            <tr>
+                <td>*비밀번호 변경 확인</td>
+                <td><input type="password" id="pw_check" required></td>
+            </tr>
+            <tr>
+                <td>*이름</td>
+                <td id="my_name"></td>
+            </tr>
+            <tr id="my_phone">
+                <td>휴대폰번호</td>
+            </tr>
+            <tr>
+                <td>*이메일</td>
+                <td id="my_email"></td>
+            </tr>
+        </tbody>
+    </table>
+    <br>
+    <hr>
+    <br>
+    <div class="my_container">
+        <input type="button" value="회원탈퇴" id="signout">
+        <input type="button" value="수정" id="modify">
+        <input type="button" value="로그아웃" id="logOut">
+    </div>
+    <script  src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script>
+        // Import the functions you need from the SDKs you need
+        //import { initializeApp } from "https://www.gstatic.com/firebasejs/9.5.0/firebase-app.js";
+        //import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.5.0/firebase-analytics.js";
+        // TODO: Add SDKs for Firebase products that you want to use
+        // https://firebase.google.com/docs/web/setup#available-libraries
+      
+        // Your web app's Firebase configuration
+        // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+        const firebaseConfig = {
+          apiKey: "AIzaSyBg9n_0QAy1EdF6Tp5p86a6PmC-b1EjFis",
+          authDomain: "cnmusicfesta.firebaseapp.com",
+          projectId: "cnmusicfesta",
+          storageBucket: "cnmusicfesta.appspot.com",
+          messagingSenderId: "832601431436",
+          appId: "1:832601431436:web:9e808f28d1eebc43dd4aa9",
+          measurementId: "G-S8J3BYFX46"
+        };
+      
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+        //const analytics = getAnalytics(app);
+        var db = firebase.firestore();
+      </script>
+    <script type="text/javascript" src="./js/update.js"></script>
+</body>
+</html>

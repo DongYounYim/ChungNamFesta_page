@@ -32,3 +32,8 @@ th, td {
     font-size: 10px;
     color: #999;
 }
+
+#modify {
+    margin-left: 20px;
+    margin-right: 20px;
+}

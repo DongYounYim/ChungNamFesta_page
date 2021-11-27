@@ -10,10 +10,10 @@ for(var i = 0; i < img_list.length; i++) {
 }
 
 $(document).ready(function() {
-    let loginfo = document.getElementById("log_info");
+  let loginfo = document.getElementById("log_info");
     if(sessionStorage.id != null && sessionStorage.name != null) {
-        loginfo.innerHTML = sessionStorage.name + " 님";
-        loginfo.href = "sub_comingsoon.html";     //회원정보 수정.
+      loginfo.innerHTML = sessionStorage.name + " 님";
+      loginfo.href = "sub_update.html";     //회원정보 수정.
     }
 })
 

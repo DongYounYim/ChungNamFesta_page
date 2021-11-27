@@ -4,7 +4,7 @@ $(document).ready(function() {
     let loginfo = document.getElementById("log_info");
     if(sessionStorage.id != null && sessionStorage.name != null) {
         loginfo.innerHTML = sessionStorage.name + " 님";
-        loginfo.href = "sub_comingsoon.html";     //회원정보 수정.
+        loginfo.href = "sub_update.html";     //회원정보 수정.
     }
     //DB에서 게시물 목록 받아와서 넣기.
     db.collection("video")
