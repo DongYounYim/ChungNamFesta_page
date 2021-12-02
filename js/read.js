@@ -25,7 +25,7 @@ $(document).ready(function() {
         var to_list_a = document.createElement("a");
         to_list_a.id = "to_list";
         to_list_a.innerHTML = "목록으로";
-        to_list_a.href = "sub_비디오갤러리.html";
+        to_list_a.href = "sub_공연영상.html";
         regist_div.appendChild(to_list_a);
 
     } else if(cur_from == "board") {

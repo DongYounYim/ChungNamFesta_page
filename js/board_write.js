@@ -45,7 +45,7 @@ function register() {
     let date = new Date().toISOString().substr(0, 10);
     let title = document.getElementById("board_title").value;
     let content = document.getElementById("board_contents").value;
-    content = content.replace(/\n/gi, "<br>");
+    content = content.replace(/\n/gi, "<br>");      //개행을 받기위함
 
     if(title == "" || content == "") {
         alert("제목이나 내용이 비었습니다.");
