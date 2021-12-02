@@ -7,7 +7,7 @@ function p_upload() {
     let timestamp = new Date().getTime();
     console.log(fileName);
 
-    db.collection("photo").doc(timestamp).set({
+    db.collection("photo").doc(String(timestamp)).set({
         path: "photos/" + fileName,
         title: upload_title.value
     })

@@ -236,7 +236,14 @@
 
   #regist_div {
       display: flex;
-      justify-content: flex-end;
+  }
+
+  .option_btn {
+    margin-right: 10px;
+  }
+
+  #to_list, #regist_btn {
+    margin-left: auto;
   }
  
 /*aside navigation*/

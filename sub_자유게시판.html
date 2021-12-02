@@ -8,6 +8,9 @@
     <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <!-- Main Stylesheet File -->
     <link href="css/sub_board.css" rel="stylesheet">
+    <!--DB(Firebase)-->
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
 </head>
 <body>
     <div id="wrapper">
@@ -89,15 +92,19 @@
             <div class="my_container" id="main_content">
                 <hr>
                 <div class="div_input">
+                    <select id="my_option">
+                      <option value="tt">제목</option>
+                      <option value="ww">작성자</option>
+                    </select>
                     <input type="search" placeholder="검색하기" id="search">
                 </div>
                 <div class="p-content" id="tb_board">
                   <table class="board">
                       <tr>
-                          <td class="w_date">작성일시</td>
-                          <td class="w_title">게시물제목</td>
-                          <td class="w_writer">작성자</td>
-                          <td class="w_view">조회수</td>
+                          <td class="w_date t-head">작성일시</td>
+                          <td class="w_title t-head">게시물제목</td>
+                          <td class="w_writer t-head">작성자</td>
+                          <td class="w_view t-head">조회수</td>
                       </tr>
                   </table>
                 </div>
@@ -105,18 +112,15 @@
                 <div class="div_input">
                     <input type="button" value="글쓰기" id="write">
                 </div>
+                <hr>
                 <div class="page_nav">
-                  <tr>
-                    <td colspan="7">
-                      <a href="#">이전</a>
-                      <a href="#">1</a>
-                      <a href="#">2</a>
-                      <a href="#">3</a>
-                      <a href="#">4</a>
-                      <a href="#">5</a>
-                      <a href="#">다음</a>
-                    </td>
-                  </tr>
+                  <table>
+                    <tr>
+                      <td id="ma_td" colspan="7">
+  
+                      </td>
+                    </tr>
+                  </table>
                 </div>
             </div>
           </main>
@@ -144,7 +148,31 @@
             </div>
           </div>
         </footer><!-- #footer -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+      // Import the functions you need from the SDKs you need
+      //import { initializeApp } from "https://www.gstatic.com/firebasejs/9.5.0/firebase-app.js";
+      //import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.5.0/firebase-analytics.js";
+      // TODO: Add SDKs for Firebase products that you want to use
+      // https://firebase.google.com/docs/web/setup#available-libraries
+      
+      // Your web app's Firebase configuration
+      // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+      const firebaseConfig = {
+          apiKey: "AIzaSyBg9n_0QAy1EdF6Tp5p86a6PmC-b1EjFis",
+          authDomain: "cnmusicfesta.firebaseapp.com",
+          projectId: "cnmusicfesta",
+          storageBucket: "cnmusicfesta.appspot.com",
+          messagingSenderId: "832601431436",
+          appId: "1:832601431436:web:9e808f28d1eebc43dd4aa9",
+          measurementId: "G-S8J3BYFX46"
+      };
+      
+      // Initialize Firebase
+      firebase.initializeApp(firebaseConfig);
+      //const analytics = getAnalytics(app);
+      var db = firebase.firestore();
+    </script>
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
     <script src="js/board.js"></script>
 </body>
 </html>

@@ -260,6 +260,11 @@
     border-bottom: 1px solid black;
   }
 
+  .t-head {
+    font-size: 20px;
+    font-weight: bold;
+  }
+
 @media ( max-width: 768px ){
   #main {
     grid-template-columns: 1fr;
@@ -281,6 +286,16 @@
 .page_nav a {
   padding-left: 10px;
   padding-right: 10px;
+}
+
+#ma_td a:hover {  
+  background-color: silver;
+  cursor: pointer;
+
+}
+
+.can_click:hover {
+  cursor: pointer;
 }
 /*aside navigation*/
 
