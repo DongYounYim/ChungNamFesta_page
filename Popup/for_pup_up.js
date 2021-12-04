@@ -7,24 +7,32 @@ window.onload = function() {
 }
 
 //쿠키로 오늘 하루 보지 않기.
-// let today = document.getElementById("today");
+let today = document.getElementById("today");
 
-// function closeToday() {
-//     setCookie("close_today", "yes", "");
-//     getCookie("close_today");
-//     window.close();
-// }
+function closeToday() {
+    console.log("closeToday_click");
+    setCookie("close_today", "yes", 1);
+    getCookie("close_today");
+    //window.close();
+}
 
-// function setCookie(name, value, exp) {
-//     var date = new Date();
-//     date.setTime(date.getTime() + exp*24*60*60*1000);
-//     document.cookie = name + '=' + value + ';expires=' + date.toUTCString() + ';Domain=http://www.cnfesta.co.kr';
-// };
+function setCookie(c_name,value,exdays) {
+   var exdate=new Date();
+   exdate.setDate(exdate.getDate() + exdays);
+   var c_value=escape(value) + ((exdays==null) ? "" : "; expires="+exdate) + ";path=/";
+   document.cookie=c_name + "=" + c_value;
+}
 
-// function getCookie(name) {
-//     var value = document.cookie.match('(^|;) ?' + name + '=([^;]*)(;|$)');
-//     console.log(value);
-//     return value ? value[2] : null;
-// };
+function getCookie(c_name)  {
+   var i,x,y,ARRcookies=document.cookie.split(";");
+   for (i=0;i<ARRcookies.length;i++)    {
+        x=ARRcookies[i].substr(0,ARRcookies[i].indexOf("="));
+        y=ARRcookies[i].substr(ARRcookies[i].indexOf("=")+1);
+        x=x.replace(/^\s+|\s+$/g,"");
+        if (x==c_name) {
+            return unescape(y);
+        }
+    }
+}
 
-// today.addEventListener("click", closeToday);
+today.addEventListener("click", closeToday);
