@@ -5,6 +5,7 @@ var now_page;
 let search = document.getElementById("search");
 let select = document.getElementById("my_option");
 search.addEventListener("change", do_search);
+var myobj;
 
 $(document).ready(function() {
   let loginfo = document.getElementById("log_info");
@@ -45,23 +46,23 @@ $(document).ready(function() {
       view.innerHTML = `${doc.data().view}`;
       my_tr.appendChild(view);
 
-      var myobj = {
-        tb: my_table,
+      myobj = {
+        metb: my_table,
         title: `${doc.data().title}`,
         writer: `${doc.data().writer}`
       }
 
       bd_list.push(myobj);
-
+      //element 모두 만들어 놓고 obj객체 형태로 저장 후 list에 저장
     })
   })
   .then(() => {
-    bd_list.reverse();
-    pageload();
+    bd_list.reverse();  //timestamp가 역순으로 되어있어서 reverse
+    pageload();         
   })
 })
 
-function pageload() {
+function pageload() {   // 페이지 내부에서 이동하느 nav바 만듬. 
   now_page = 1
   let nav_td = document.getElementById("ma_td");
   let back_a = document.createElement("a");
@@ -88,7 +89,7 @@ function pageload() {
   pageMove(1)
 }
 
-function pageMove(pageNum) {
+function pageMove(pageNum) {    //nav var 정보에 맞게 게시물 보여줌
   now_page = pageNum;
   let select_a = document.getElementsByClassName("nav_a");
   for(var s = 0; s < select_a.length; s++) {
@@ -102,14 +103,14 @@ function pageMove(pageNum) {
       tb_board.removeChild(tb_board.lastElementChild);
   }
   for(var j = (10*pageNum - 10); j < 10*pageNum; j++) {
-      if(bd_list[j].tb == undefined) {
+      if(!bd_list[j]) {
           break;
       }
-      tb_board.appendChild(bd_list[j].tb);
+      tb_board.appendChild(bd_list[j].metb);
   }
 } 
 
-function back_click() {
+function back_click() {     //이전 버튼 클릭
   if(now_page == 1) {
     alert("이전 페이지가 없습니다.");
   } else{
@@ -117,14 +118,14 @@ function back_click() {
   }
 }
 
-function next_click() {
+function next_click() {     //다음 버튼 클릭
   if(now_page == last_page) {
     alert("다음 페이지가 없습니다.");
   } else {
     pageMove(now_page+1);
   }
 }
-function load_board_page(this_timestamp, this_view) {
+function load_board_page(this_timestamp, this_view) {     //제목 클릭시 내용으로 이동
   db.collection("board").doc(String(this_timestamp)).update({
     view: Number(this_view) + 1
   })
@@ -135,7 +136,7 @@ function load_board_page(this_timestamp, this_view) {
   })
 }
 
-function show_write() {
+function show_write() {     //글쓰기 버튼 클릭시
   if(!sessionStorage.id) {
     alert("로그인 후 이용가능합니다.");
   } else {
@@ -143,7 +144,7 @@ function show_write() {
   }
 }
 
-function do_search() {
+function do_search() {      //검색기능
   var option_val = select.value;
   var search_val = search.value;
   if(search_val == "") {    //아무것도 입력안했을때
@@ -161,14 +162,14 @@ function do_search() {
     //제목으로 검색
     for(var i = 0; i < bd_list.length; i++) {
       if(bd_list[i].title.includes(search_val)) {
-        tb_board.appendChild(bd_list[i].tb);
+        tb_board.appendChild(bd_list[i].metb);
       }
     }
   } else {
     //작성자로 검색
     for(var i = 0; i < bd_list.length; i++) {
       if(bd_list[i].writer.includes(search_val)) {
-        tb_board.appendChild(bd_list[i].tb);
+        tb_board.appendChild(bd_list[i].metb);
       }
     }
   }

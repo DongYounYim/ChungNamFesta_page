@@ -4,7 +4,7 @@ let log_btn = document.getElementById("log_in");
 
 log_btn.addEventListener("click", login);
 
-function login() {
+function login() {  //로그인 버튼 클릭시
     var pass = false
     var user_name = ""
     var user_id = ""
@@ -23,9 +23,7 @@ function login() {
         })
     })
     .then(() => {
-        if(pass) {
-            //현재 테스트라 
-            //window.locaiton.href = "index.html";
+        if(pass) {  //로그인 성공했을때만 동작
             window.location.href = "index.html";
             //sessionStroage에 id와 name저장
             sessionStorage.setItem("id", user_id);

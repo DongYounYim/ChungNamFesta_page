@@ -6,7 +6,7 @@ $(document).ready(function() {
         loginfo.innerHTML = sessionStorage.name + " 님";
         loginfo.href = "sub_update.html";     //회원정보 수정.
     }
-    if(sessionStorage.mod == "modify") {
+    if(sessionStorage.mod == "modify") {        //게시물 수정모드로 들어왔을 경우
         document.getElementById("write_head").innerHTML = "게시물 수정";
         regist_btn.innerHTML = "게시물 수정";
         regist_btn.removeEventListener("click", register);
@@ -40,7 +40,7 @@ function asan_click() {
   sessionStorage.setItem("locate", "asan");
 }
 
-function register() {
+function register() {       //게시물 등록버튼 클릭시
     let timestamp = new Date().getTime();
     let date = new Date().toISOString().substr(0, 10);
     let title = document.getElementById("board_title").value;
@@ -66,7 +66,7 @@ function register() {
     })
 }
 
-function modify() {
+function modify() {         //수정모드에서 수정버튼 클릭시.
     db.collection("board").doc(String(sessionStorage.timestamp)).update({
         title: document.getElementById("board_title").value,
         content: document.getElementById("board_contents").value

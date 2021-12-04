@@ -1,6 +1,6 @@
 let now_check = "";
 
-function show_mail() {
+function show_mail() {      //이메일로 찾기 라디오버튼 클릭시
     now_check = "mail";
     while(show_box.hasChildNodes()) {
         show_box.removeChild(show_box.firstChild);
@@ -42,7 +42,7 @@ function show_mail() {
     email_input_td.appendChild(email_input);
 }
 
-function show_phone() {
+function show_phone() {     //핸드폰 번호로 찾기 라디오버튼 클릭시
     now_check = "phone";
     while(show_box.hasChildNodes()) {
         show_box.removeChild(show_box.firstChild);
@@ -90,7 +90,7 @@ function find() {
     let user_doc = ""
     if(now_check == "") {
         alert("이메일과, 휴대전화 중 선택해주세요");
-    } else if(now_check == "phone"){
+    } else if(now_check == "phone"){            //핸드폰 번호로 찾기
         let get_id = document.getElementById("ID").value;
         let get_name = document.getElementById("my_name").value;
         let get_phone = document.getElementById("phone_num").value;
@@ -98,14 +98,14 @@ function find() {
         .get()
         .then((querySanpshot) => {
             querySanpshot.forEach((doc) => {
-                if(get_id == `${doc.data().id}` && get_name == `${doc.data().name}` && get_phone == `${doc.data().phone}`) {
+                if(get_id == `${doc.data().id}` && get_name == `${doc.data().name}` && get_phone == `${doc.data().phone}`) {        //모든 정보가 db와 일치
                     user_doc = `${doc.data().id}`;
                     pass = true;
                 }
             })
         })
         .then(() => {
-            if(pass) {
+            if(pass) {      //정보일치한 데이터의 비밀번호 초기화
                 db.collection("member")
                 .doc(user_doc)
                 .update({
@@ -116,7 +116,7 @@ function find() {
                 alert("일치하는 사용자를 찾을 수 없습니다.");
             }
         })
-    } else if(now_check == "mail") {
+    } else if(now_check == "mail") {            //이메일로 찾기
         let get_id = document.getElementById("ID").value;
         let get_name = document.getElementById("my_name").value;
         let get_email = document.getElementById("my_email").value;

@@ -1,6 +1,6 @@
 let img_list = document.getElementsByClassName("profile");
 
-for(var i = 0; i < img_list.length; i++) {
+for(var i = 0; i < img_list.length; i++) {    //이미지들 300/300고정크기
     img_list[i].width = 300;
     img_list[i].height = 300;
     let para_src = img_list[i].src

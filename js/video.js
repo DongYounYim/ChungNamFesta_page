@@ -45,15 +45,16 @@ $(document).ready(function() {
         my_tr.appendChild(view);
 
         my_list.push(my_table);
+        //list에 만들어 놓은 element들 저장
       })
     })
     .then(() => {
-      my_list.reverse()
-      pageload(1)
+      my_list.reverse()   //timestamp가 반대로 정렬되어있어서 reverse
+      pageload()    //pageload에서 정보 띄움
     })
 })
 
-function pageload() {
+function pageload() { //하위 nav 생성
   now_page = 1
   let nav_td = document.getElementById("ma_td");
   let back_a = document.createElement("a");
@@ -80,7 +81,7 @@ function pageload() {
   pageMove(1)
 }
 
-function pageMove(pageNum) {
+function pageMove(pageNum) {  //하위 nav에 맞는 페이지 보이게
   now_page = pageNum;
   let select_a = document.getElementsByClassName("nav_a");
   for(var s = 0; s < select_a.length; s++) {
@@ -101,7 +102,7 @@ function pageMove(pageNum) {
   }
 } 
 
-function back_click() {
+function back_click() { //이전 페이지 클릭
   if(now_page == 1) {
     alert("이전 페이지가 없습니다.");
   } else{
@@ -109,7 +110,7 @@ function back_click() {
   }
 }
 
-function next_click() {
+function next_click() { //다음 페이지 클릭
   if(now_page == last_page) {
     alert("다음 페이지가 없습니다.");
   } else {
@@ -117,7 +118,7 @@ function next_click() {
   }
 }
 
-function load_video_page(timestamp, view) {
+function load_video_page(timestamp, view) {   //video페이지에서 read로 넘어가게
   db.collection("video").doc(timestamp).update({
     "view": Number(view) + 1
   })

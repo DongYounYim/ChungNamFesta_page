@@ -203,7 +203,8 @@
     height: 500;
   }
   
-  /*main div*/
+  /*main contents*/
+  
   #main {
     display: grid;
     grid-template-columns: 15% 83%;

@@ -1,7 +1,7 @@
 let cur_id = sessionStorage.id;
 var Reg_pw = /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$/;
 
-$(document).ready(function() {
+$(document).ready(function() {      //현재의 회원정보 띄움
     db.collection("member")
     .get()
     .then((querySanpshot) => {
@@ -35,7 +35,7 @@ $(document).ready(function() {
     })
 })
 
-function signout_click() {
+function signout_click() {      //회원탈퇴 클릭시
     db.collection("member")
     .doc(cur_id)
     .delete()
@@ -52,7 +52,7 @@ function signout_click() {
     }, 5000);
 }
 
-function modify_click() {
+function modify_click() {       //회원정보 수정시
     let pw_change = document.getElementById("pw");
     let pw_check = document.getElementById("pw_check");
     if(document.getElementById("phone")) {
@@ -142,7 +142,7 @@ function modify_click() {
     }
 }
 
-function logOut_click() {
+function logOut_click() {       //로그아웃 버튼
     sessionStorage.clear();
     location.href = "./index.html"
 }

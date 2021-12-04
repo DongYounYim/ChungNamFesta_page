@@ -10,8 +10,8 @@ let input_mail = document.getElementById("mail");
 let input_agree = document.getElementById("agree");
 
 var Reg_pw = /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$/;
-var Reg_mail = /^[0-9a-zA-Z]([-_\.]?[0-9a-zA-Z])*@[0-9a-zA-Z]([-_\.]?[0-9a-zA-Z])*\.[a-zA-Z]{2,3}$/i;
-
+var Reg_mail = /^[0-9a-zA-Z]([-_\.]?[0-9a-zA-Z])*@[0-9a-zA-Z]([-_\.]?[0-9a-zA-Z])*\.[a-zA-Z]{2,3}$/;
+//비밀번호, 이메일 형식 정규식으로 체크
 function sign() {
     var pass = true;
     if(input_id.value == "") {
@@ -39,8 +39,8 @@ function sign() {
         }
         if(input_phone.value == "") {
             input_phone.value = null;
-        }
-        db.collection("member")
+        }                                           //위에까지 모두 예외처리
+        db.collection("member")                     //아이디 중복체크
         .get()
         .then((querySnapshot) => {
             querySnapshot.forEach((doc) => {
@@ -49,7 +49,7 @@ function sign() {
                     pass = false;
                 } 
             })
-            if(pass) {
+            if(pass) {  //회원가입 정보 저장
                 db.collection("member").doc(input_id.value)
                 .set({
                     id: input_id.value,

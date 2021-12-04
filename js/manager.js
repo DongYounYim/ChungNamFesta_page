@@ -1,7 +1,7 @@
 let img_upload = document.getElementById("img_upload");
 let video_upload = document.getElementById("video_upload");
 
-function p_upload() {
+function p_upload() {       //포토갤러리 업로드
     let upload_img = document.getElementById("upload_img")
     let upload_title = document.getElementById("upload_title");
     let fileName = String(upload_img.value).substr(String(upload_img.value).lastIndexOf("\\")+1);
@@ -20,7 +20,7 @@ function p_upload() {
     alert("사진 등록 완료");
 }
 
-function v_upload() {
+function v_upload() {       //비디오 갤러리 업로드
     let upload_link = document.getElementById("upload_link");
     let video_title = document.getElementById("video_title");
     let timestamp = new Date().getTime();

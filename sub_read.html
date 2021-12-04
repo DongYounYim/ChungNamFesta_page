@@ -90,6 +90,29 @@
             <div id="regist_div">
               
             </div>
+            <br>
+            <hr>
+            <table id="write_comment">
+              <tbody>
+                <tr>
+                  <th>댓글쓰기<br> <sup>(<span id="nowByte">0</span>/200bytes)</sup></th>  
+                  <td id="w_c"><textarea id="my_comment" placeholder="최대 200bytes"
+                    onkeyup="checkByte(this)"></textarea></td>
+                  <td><button id="regist_comment">등록하기</button></td>
+                </tr>
+              </tbody>
+            </table>
+            <br>
+            <table id="read_comment">
+              <thead>
+                <tr id="tr_1">
+                  <th colspan="3"><a id="see_comment">댓글 보기</a></th>
+                </tr>
+              </thead>
+              <tbody id="see_tbody">  
+          
+              </tbody>
+            </table>
           </div>
         </main>
     </div>

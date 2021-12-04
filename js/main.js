@@ -133,7 +133,6 @@ jQuery(document).ready(function ($) {
   }
 });
 
-//위에 까지 작성된 코드
 //축제상세일정클릭 
 let dangjin = document.getElementById("dangjin");
 dangjin.addEventListener("click", dangjin_click)

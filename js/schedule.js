@@ -6,7 +6,7 @@ $(document).ready(function() {
     }
 
     let cur_location = sessionStorage.locate
-    if(cur_location == "dangjin") {
+    if(cur_location == "dangjin") {             //상세일정 중 당진 버튼 클릭되었을 때
         let feti_img = document.getElementById("feti_img");
         let q_sheet = document.getElementById("q_sheet");
         let q_sheet2 = document.getElementById("q_sheet2");

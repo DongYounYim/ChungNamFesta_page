@@ -50,7 +50,7 @@ $(document).ready(function() {
             obj_list.push(c_item);
         })
     })
-    .then(() => {
+    .then(() => {       //게시물 nav 구성
         now_page = 1;
         let nav_td = document.getElementById("ma_td");
         let back_a = document.createElement("a");
@@ -77,11 +77,11 @@ $(document).ready(function() {
         pageMove(1)
     })
     //nav가 움직일때 photo_nav로 값을 표기하고
-    //리스트에 사진 link를 다 박아놓고
+    //리스트에 사진 link를 다 넣어줌.
     //nav가 움직이면 사진 정보 바꿔서 넣어주고
 })
 
-function pageMove(pageNum) {
+function pageMove(pageNum) {    //nav 페이지 넘김
     now_page = pageNum;
     let select_a = document.getElementsByClassName("nav_a");
     for(var s = 0; s < select_a.length; s++) {
@@ -103,7 +103,7 @@ function pageMove(pageNum) {
     }
 }
 
-function back_click() {
+function back_click() {     //이전 버튼 클릭
     if(now_page == 1) {
         alert("이전 페이지가 없습니다.");
     } else{
@@ -111,7 +111,7 @@ function back_click() {
     }
 }
 
-function next_click() {
+function next_click() {     //다음 버튼 클릭
     if(now_page == last_page) {
         alert("다음 페이지가 없습니다.");
     } else {
